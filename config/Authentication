@@ -1,0 +1,31 @@
+Authentication
+  Provide users with a way to login to app
+  Store password encrypted in database
+  create sessions so users stay logged in
+  destroy session to logout user 
+
+Encryption
+  How it works: 
+    take in password and a "salt" and returns a hashed password
+
+* need to add digest to password
+ 
+
+* f.password_field 
+
+bcrypt gem generates salt, password hashing
+
+||= 
+
+
+THE GOOD WAY
+rails engine: an app running inside of the app
+
+Devise Modules
+  Database authenticatable: encrypts and stores passwords in the db
+  Omniauthable: multi-provider authentication
+  Confirmable: email confirmation
+  Recoverable: resets passwords and sends reset instructions
+  Registerable: signs up users
+  Timeoutable: expires sessions
+
