@@ -1,43 +1,23 @@
 <div class="row">
     <form class="col s12">
+    <%= form_for @student do |f| %>
       <div class="row">
-        <div class="input-field col s6">
-          <input placeholder="First Name" id="name" type="text" class="validate">
-          <label for="name"></label>
+        <div class="input-field col s4">
+          <%= f.label :first_name %>
+          <%= f.text_field :first_name %>
         </div>
-        <div class="input-field col s6">
-          <input placeholder="Last Name" id="lastname" type="text" class="validate">
-          <label for="lastname"></label>
+        <div class="input-field col s4">
+          <%= f.label :last_name %>
+          <%= f.text_field :last_name %>
         </div>
-
-        <div class="input-field col s6">
-          <input placeholder="Major" id="major" type="text" class="validate">
-          <label for="major"></label>
-        </div>
-
-      </div>
-    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-     <i class="material-icons">send</i>
-    </button>
-
-    </form>
-  </div>
-
-
-<div class='container cols12 m4 l8 offset-m6-l2'>
-  <div class="row ">
-    <h4 class='center-align'>Sign up</h4>
-      <div class="row">
-        <%= form_for @student do |f| %>
-        <div class="input-field col s12 m6 ">
-          <%= f.label :first_name %><br />
-          <%= f.text_field :first_name, autofocus: true %>
+        <div class="input-field col s4">
+          <%= f.label :major %>
+          <%= f.text_field :major %>
         </div>
       </div>
-      
-      <div class="actions right-align">
-        <%= f.submit "Sign up" %>
-      </div>
-        <% end %>
-  </div>
+      <button class="btn waves-effect waves-light" type="submit" name="action">
+        <i class="material-icons"><%= f.submit %></i>
+      </button>
+    <% end %>
+  </form>
 </div>

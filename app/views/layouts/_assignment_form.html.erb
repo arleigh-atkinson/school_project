@@ -1,12 +1,19 @@
-<%= form_for @assignment do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-
-  <%= f.label :course_id %>
-  <%= f.text_field :course_id %>
-
-
-
-  <%= f.submit %>
-
-<% end %>
+<div class="row">
+    <form class="col s12">
+    <%= form_for @assignment do |f| %>
+      <div class="row">
+        <div class="input-field col s4">
+          <%= f.label :name %>
+          <%= f.text_field :name %>
+        </div>
+        <div class="input-field col s4">
+          <%= f.label :course_id %>
+          <%= f.text_field :course_id %>
+        </div>
+      </div>
+      <button class="btn waves-effect waves-light" type="submit" name="action">
+        <i class="material-icons"><%= f.submit %></i>
+      </button>
+    <% end %>
+  </form>
+</div>

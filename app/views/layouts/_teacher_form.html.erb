@@ -1,27 +1,23 @@
 <div class="row">
     <form class="col s12">
+    <%= form_for @teacher do |f| %>
       <div class="row">
-        
-        <div class="input-field col s6">
-          <input placeholder="First Name" id="name" type="text" class="validate">
-          <label for="name"></label>
+        <div class="input-field col s4">
+          <%= f.label :first_name %>
+          <%= f.text_field :first_name %>
         </div>
-        
-        <div class="input-field col s6">
-          <input placeholder="Last Name" id="lastname" type="text" class="validate">
-          <label for="lastname"></label>
+        <div class="input-field col s4">
+          <%= f.label :last_name %>
+          <%= f.text_field :last_name %>
         </div>
-
-        <div class="input-field col s6">
-          <input placeholder="department" id="department" type="text" class="validate">
-          <label for="department"></label>
+        <div class="input-field col s4">
+          <%= f.label :department %>
+          <%= f.text_field :department %>
         </div>
-
       </div>
-    
-      <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-        <i class="material-icons">send</i>
+      <button class="btn waves-effect waves-light" type="submit" name="action">
+        <i class="material-icons"><%= f.submit %></i>
       </button>
-
-    </form>
-  </div>
+    <% end %>
+  </form>
+</div>
