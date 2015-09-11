@@ -22,3 +22,22 @@
 
     </form>
   </div>
+
+
+<div class='container cols12 m4 l8 offset-m6-l2'>
+  <div class="row ">
+    <h4 class='center-align'>Sign up</h4>
+      <div class="row">
+        <%= form_for @student do |f| %>
+        <div class="input-field col s12 m6 ">
+          <%= f.label :first_name %><br />
+          <%= f.text_field :first_name, autofocus: true %>
+        </div>
+      </div>
+      
+      <div class="actions right-align">
+        <%= f.submit "Sign up" %>
+      </div>
+        <% end %>
+  </div>
+</div>

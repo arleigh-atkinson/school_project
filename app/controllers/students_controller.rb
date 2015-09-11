@@ -18,7 +18,8 @@ class StudentsController < ApplicationController
     if @student.save
       redirect_to students_path
     else
-    render :new
+      render :new
+    end
   end
 
   def update
@@ -29,6 +30,7 @@ class StudentsController < ApplicationController
     else
       render :edit
     end
+  end
 
 
   def edit
